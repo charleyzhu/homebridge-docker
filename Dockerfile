@@ -1,6 +1,6 @@
 FROM node:7.10
 
-MAINTAINER Marco Raddatz
+MAINTAINER Charley
 
 # Set environment variables
 ENV DEBIAN_FRONTEND noninteractive

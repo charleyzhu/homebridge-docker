@@ -6,14 +6,16 @@ MAINTAINER Marco Raddatz
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
+# httpredir repo
+ADD httpredir.list /etc/apt/sources.list.d/httpredir.list
+
 # Install dependencies and tools
 RUN apt-get update; \
     apt-get install -y apt-utils apt-transport-https; \
     apt-get install -y curl wget; \
     apt-get install -y libnss-mdns avahi-discover libavahi-compat-libdnssd-dev libkrb5-dev; \
     apt-get install -y nano vim; \
-    apt-get install -y libav-tools; \
-    apt-get install -y ffmpeg
+    apt-get install -y  ffmpeg
 
 # Install latest Homebridge
 # -------------------------------------------------------------------------
